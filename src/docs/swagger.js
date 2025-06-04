@@ -29,7 +29,7 @@ const swaggerDefinition = {
     {
       url:
         process.env.ENV === "prod"
-          ? `${process.env.APP_URL}`
+          ? `${process.env.API_URL}`
           : `http://localhost:${process.env.APP_PORT}/api`,
       description: "Task Management",
     },
