@@ -13,21 +13,21 @@ const signJwt = (payload) => {
   }
 };
 
-// const verifyToken = (token) => {
+const verifyToken = (token) => {
 
-//   try {
-//     const payload = jwt.verify(token, jwtSecret);
+  try {
+    const payload = jwt.verify(token, jwtSecret);
     
-//    return payload;
-//   } catch (err) {
-//     console.log(err)
-//     throw new Error("Invalid Token");
+   return payload;
+  } catch (err) {
+    console.log(err)
+    throw new Error("Invalid Token");
     
-//   }
-// };
+  }
+};
 
 
 module.exports = {
   signJwt,
-  // verifyToken,
+  verifyToken,
 };
